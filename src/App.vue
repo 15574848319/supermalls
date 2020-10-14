@@ -1,28 +1,69 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <tab-bar>
+      <tab-bar-item link='/home'>
+        <template v-slot:item-icon>
+          <img src="~assets/img/tabbar/home.svg"  alt="">
+        </template>
+        <template v-slot:item-icon-active>
+          <img src="~assets/img/tabbar/home_active.svg"  alt="">
+        </template>
+         <template v-slot:item-text>
+            首页
+        </template>
+      </tab-bar-item>
+
+      <tab-bar-item link='/category'>
+         <template v-slot:item-icon>
+          <img src="~assets/img/tabbar/category.svg"  alt="">
+        </template>
+        <template v-slot:item-icon-active>
+          <img src="~assets/img/tabbar/category_active.svg"  alt="">
+        </template>
+         <template v-slot:item-text>
+            分类
+        </template>
+      </tab-bar-item>
+
+      <tab-bar-item link='/shopcart'>
+         <template v-slot:item-icon>
+          <img src="~assets/img/tabbar/shopcart.svg"  alt="">
+        </template>
+        <template v-slot:item-icon-active>
+          <img src="~assets/img/tabbar/shopcart_active.svg"  alt="">
+        </template>
+         <template v-slot:item-text>
+            购物车
+        </template>
+      </tab-bar-item>
+
+      <tab-bar-item link='/profile'>
+         <template v-slot:item-icon>
+          <img src="~assets/img/tabbar/profile.svg"  alt="">
+        </template>
+        <template v-slot:item-icon-active>
+          <img src="~assets/img/tabbar/home_active.svg"  alt="">
+        </template>
+         <template v-slot:item-text>
+            我的
+        </template>
+      </tab-bar-item>
+    </tab-bar>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import TabBar from "components/common/tabbar/TabBar.vue";
+import TabBarItem from "components/common/tabbar/TabBarItem.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    TabBar,
+    TabBarItem,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "assets/css/base.css";
 </style>
