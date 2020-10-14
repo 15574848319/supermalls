@@ -1,7 +1,8 @@
 <template>
   <div>
+    <router-view></router-view>
     <tab-bar>
-      <tab-bar-item link='/home'>
+      <tab-bar-item link='/home' activeColor='deepPink'>
         <template v-slot:item-icon>
           <img src="~assets/img/tabbar/home.svg"  alt="">
         </template>
@@ -13,7 +14,7 @@
         </template>
       </tab-bar-item>
 
-      <tab-bar-item link='/category'>
+      <tab-bar-item link='/category' activeColor='deepPink'>
          <template v-slot:item-icon>
           <img src="~assets/img/tabbar/category.svg"  alt="">
         </template>
@@ -25,7 +26,7 @@
         </template>
       </tab-bar-item>
 
-      <tab-bar-item link='/shopcart'>
+      <tab-bar-item link='/shopcart' activeColor='deepPink'>
          <template v-slot:item-icon>
           <img src="~assets/img/tabbar/shopcart.svg"  alt="">
         </template>
@@ -37,7 +38,7 @@
         </template>
       </tab-bar-item>
 
-      <tab-bar-item link='/profile'>
+      <tab-bar-item link='/profile' activeColor='deepPink'>
          <template v-slot:item-icon>
           <img src="~assets/img/tabbar/profile.svg"  alt="">
         </template>
